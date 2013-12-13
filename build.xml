@@ -71,4 +71,14 @@
     nbproject/build-impl.xml file. 
 
     -->
+
+<target name="-post-jar">
+  <jar jarfile="dist/SolarJetmanPasswordGeneratorInclLib.jar">
+    <zipfileset src="${dist.jar}" excludes="META-INF/*" />
+    <zipfileset src="lib/commons-lang3-3.0.1.jar" excludes="META-INF/*" />
+    <manifest>
+        <attribute name="Main-Class" value="ui.SolarJetmanPasswordGeneratorUI"/>
+    </manifest>
+  </jar>
+</target>
 </project>

@@ -44,6 +44,7 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
         labelPod = new javax.swing.JLabel();
         labelPassword = new javax.swing.JLabel();
         textFieldScore = new javax.swing.JTextField();
+        buttonAbout = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -99,6 +100,13 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
 
         textFieldScore.setText("0");
 
+        buttonAbout.setText("About");
+        buttonAbout.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonAboutActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,7 +118,10 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(buttonGeneratePassword)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(buttonAbout)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(buttonGeneratePassword))
                                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -171,7 +182,9 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
                     .addComponent(labelPassword)
                     .addComponent(textFieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(buttonGeneratePassword)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(buttonGeneratePassword)
+                    .addComponent(buttonAbout))
                 .addGap(0, 8, Short.MAX_VALUE))
         );
 
@@ -221,6 +234,13 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_checkBoxThrustersActionPerformed
 
+    private void buttonAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonAboutActionPerformed
+        JOptionPane.showMessageDialog(this,
+            "NES Solar Jetman Password Generator by Shawn M. Crawford",
+            "About",
+            JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_buttonAboutActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -237,6 +257,7 @@ public class SolarJetmanPasswordGeneratorUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonAbout;
     private javax.swing.JButton buttonGeneratePassword;
     private javax.swing.JCheckBox checkBoxShields;
     private javax.swing.JCheckBox checkBoxThrusters;
